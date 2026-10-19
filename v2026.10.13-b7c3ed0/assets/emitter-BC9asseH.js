@@ -1,0 +1,1 @@
+var e=class{#e=new Map;on(e,t){return this.#e.has(e)||this.#e.set(e,new Set),this.#e.get(e).add(t),()=>this.#e.get(e)?.delete(t)}emit(e,t){for(let n of this.#e.get(e)||[])try{n(t)}catch(e){console.error(e)}}};export{e as t};

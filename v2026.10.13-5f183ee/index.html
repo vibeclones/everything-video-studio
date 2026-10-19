@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Video Studio</title>
+  <meta name="description" content="A multi-track video editor: trim, split, add text, effects, transitions, filters, keyframes and captions, then export. Projects are stored in your own Puter cloud." />
+  <meta name="theme-color" content="#f4f4f5" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="./favicon.ico" sizes="16x16 32x32 48x48" />
+  <link rel="icon" href="./favicon-16x16.png" type="image/png" sizes="16x16" />
+  <link rel="icon" href="./favicon-32x32.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="./favicon-48x48.png" type="image/png" sizes="48x48" />
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png" sizes="180x180" />
+  <link rel="manifest" href="./manifest.json" />
+  <script>
+    // Apply the saved theme before first paint so there is no flash.
+    (() => {
+      let t = 'dark';
+      try { t = localStorage.getItem('video-studio:theme') || 'dark'; } catch {}
+      const dark = t === 'dark' || (t === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
+      const root = document.documentElement;
+      root.dataset.theme = t;
+      root.dataset.themeResolved = dark ? 'dark' : 'light';
+    })();
+  </script>
+  <script src="https://js.puter.com/v2/" defer></script>
+  <script type="module" crossorigin src="./assets/index-Drgre6S6.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/zap-_ik4__1o.js">
+  <link rel="modulepreload" crossorigin href="./assets/dialog-Dka2EOBp.js">
+  <link rel="modulepreload" crossorigin href="./assets/time-BQHrepxd.js">
+  <link rel="modulepreload" crossorigin href="./assets/audio-biYwsdwa.js">
+  <link rel="modulepreload" crossorigin href="./assets/timeline-CaG3rhMv.js">
+  <link rel="modulepreload" crossorigin href="./assets/catalog-Dbnj8Hh_.js">
+  <link rel="modulepreload" crossorigin href="./assets/slice-Yyh72qIg.js">
+  <link rel="modulepreload" crossorigin href="./assets/scene-CGn0yMF9.js">
+  <link rel="modulepreload" crossorigin href="./assets/text-CDtC0Gb1.js">
+  <link rel="modulepreload" crossorigin href="./assets/prefs-6gHGBuvt.js">
+  <link rel="modulepreload" crossorigin href="./assets/emitter-BC9asseH.js">
+  <link rel="modulepreload" crossorigin href="./assets/rolldown-runtime-hePW80VL.js">
+  <link rel="modulepreload" crossorigin href="./assets/wav-Q-s1i1ZG.js">
+  <link rel="modulepreload" crossorigin href="./assets/template-art-KTmX4kyg.js">
+  <link rel="stylesheet" crossorigin href="./assets/index-C29wkN_J.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to editor</a>
+  <div id="app" class="app" aria-busy="true"></div>
+  <div id="live-region" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
